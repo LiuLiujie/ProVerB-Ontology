@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="http://slebok.github.io/proverb#"
+	xmlns:gh="https://github.com"
+	xmlns:doi="https://doi.org"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:ontology="http://slebok.github.io/proverb/ontology#">
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+	<owl:versionIRI rdf:resource="http://slebok.github.io/proverb/ontology/1.2.1"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Object Properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#author -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#author">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+	<rdfs:domain rdf:resource="http://slebok.github.io/proverb/ontology#Article"/>
+	<rdfs:range rdf:resource="http://slebok.github.io/proverb/ontology#Person"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#category -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#category">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:domain rdf:resource="http://slebok.github.io/proverb/ontology#Tool"/>
+	<rdfs:range rdf:resource="http://slebok.github.io/proverb/ontology#Concept"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#contributor -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#contributor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+	<rdfs:domain rdf:resource="http://slebok.github.io/proverb/ontology#Repository"/>
+	<rdfs:range rdf:resource="http://slebok.github.io/proverb/ontology#Person"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#relatedpaper -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#relatedpaper">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+	<rdfs:domain rdf:resource="http://slebok.github.io/proverb/ontology#Tool"/>
+	<rdfs:range rdf:resource="http://slebok.github.io/proverb/ontology#Article"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#repository -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#repository">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+	<rdfs:domain rdf:resource="http://slebok.github.io/proverb/ontology#Tool"/>
+	<rdfs:range rdf:resource="http://slebok.github.io/proverb/ontology#Repository"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Data properties -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#abstract -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#abstract">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#email -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#email">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+	<rdfs:domain rdf:resource="http://slebok.github.io/proverb/ontology#Writer"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#name -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#name">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+	<rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</rdf:Description>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- ################################################################# -->
+<!-- # -->
+<!-- #    Classes -->
+<!-- # -->
+<!-- ################################################################# -->
+<!--  -->
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#Article -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#Article">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#CodeContributor -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#CodeContributor">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://slebok.github.io/proverb/ontology#Person"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#Concept -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#Concept">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#Conference -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#Conference">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://slebok.github.io/proverb/ontology#Concept"/>
+	<owl:disjointWith rdf:resource="http://slebok.github.io/proverb/ontology#PV"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#Format -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#Format">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#PV -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://slebok.github.io/proverb/ontology#Concept"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#Person -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#Person">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#Repository -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#Repository">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#Technique -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#Technique">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#Tool -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#Tool">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+<!--  -->
+<!-- http://slebok.github.io/proverb/ontology#Writer -->
+
+<rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#Writer">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+	<rdfs:subClassOf rdf:resource="http://slebok.github.io/proverb/ontology#Person"/>
+</rdf:Description>
+
+</rdf:RDF>

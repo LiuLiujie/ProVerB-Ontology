@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontology="http://slebok.github.io/proverb/ontology#">
     <owl:Ontology rdf:about="http://slebok.github.io/proverb/ontology">
-        <owl:versionIRI rdf:resource="http://slebok.github.io/proverb/ontology/1.0.0"/>
+        <owl:versionIRI rdf:resource="http://slebok.github.io/proverb/ontology/1.4.0"/>
     </owl:Ontology>
     
 
@@ -97,7 +97,32 @@
     <!-- http://slebok.github.io/proverb/ontology#email -->
 
     <owl:DatatypeProperty rdf:about="http://slebok.github.io/proverb/ontology#email">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://slebok.github.io/proverb/ontology#Writer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#lastActivityDate -->
+
+    <owl:DatatypeProperty rdf:about="http://slebok.github.io/proverb/ontology#lastActivityDate"/>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#lastCommitDate -->
+
+    <owl:DatatypeProperty rdf:about="http://slebok.github.io/proverb/ontology#lastCommitDate">
+        <rdfs:subPropertyOf rdf:resource="http://slebok.github.io/proverb/ontology#lastActivityDate"/>
+        <rdfs:domain rdf:resource="http://slebok.github.io/proverb/ontology#Repository"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#lastPublicationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://slebok.github.io/proverb/ontology#lastPublicationDate">
+        <rdfs:subPropertyOf rdf:resource="http://slebok.github.io/proverb/ontology#lastActivityDate"/>
+        <rdfs:domain rdf:resource="http://slebok.github.io/proverb/ontology#Article"/>
     </owl:DatatypeProperty>
     
 
@@ -106,14 +131,6 @@
 
     <owl:DatatypeProperty rdf:about="http://slebok.github.io/proverb/ontology#name">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://slebok.github.io/proverb/ontology#orcid -->
-
-    <owl:DatatypeProperty rdf:about="http://slebok.github.io/proverb/ontology#orcid">
-        <rdfs:domain rdf:resource="http://slebok.github.io/proverb/ontology#Writer"/>
     </owl:DatatypeProperty>
     
 
@@ -201,6 +218,250 @@
     <owl:Class rdf:about="http://slebok.github.io/proverb/ontology#Writer">
         <rdfs:subClassOf rdf:resource="http://slebok.github.io/proverb/ontology#Person"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#AADL -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#AADL">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#AGREE -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#AGREE">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Tool"/>
+        <ontology:category rdf:resource="http://slebok.github.io/proverb/ontology#AADL"/>
+        <ontology:category rdf:resource="http://slebok.github.io/proverb/ontology#Model_checking"/>
+        <ontology:category rdf:resource="http://slebok.github.io/proverb/ontology#PV3"/>
+        <ontology:relatedpaper rdf:resource="https://doi.org/10.1007/978-3-642-28891-3_13"/>
+        <ontology:relatedpaper rdf:resource="https://doi.org/10.1016/j.ress.2021.107649"/>
+        <ontology:repository rdf:resource="https://github.com/loonwerks/AGREE"/>
+        <ontology:abstract xml:lang="en">checks properties against an AADL model</ontology:abstract>
+        <ontology:name>AGREE: Assume Guarantee Reasoning Environment</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#Danielle_Stewart -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#Danielle_Stewart">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Writer"/>
+        <owl:sameAs rdf:resource="https://github.com/dkstewart"/>
+        <ontology:author rdf:resource="https://doi.org/10.1016/j.ress.2021.107649"/>
+        <ontology:email xml:lang="en">dkstewar@umn.edu</ontology:email>
+        <ontology:name xml:lang="en">Danielle Stewart</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#Darren_Cofer -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#Darren_Cofer">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Writer"/>
+        <ontology:author rdf:resource="https://doi.org/10.1016/j.ress.2021.107649"/>
+        <ontology:email xml:lang="en">Darren.Cofer@collins.com</ontology:email>
+        <ontology:name xml:lang="en">Darren Cofer</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#Mats_Heimdahl -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#Mats_Heimdahl">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Writer"/>
+        <ontology:author rdf:resource="https://doi.org/10.1016/j.ress.2021.107649"/>
+        <ontology:email xml:lang="en">heimdahl@cs.umn.edu</ontology:email>
+        <ontology:name xml:lang="en">Mats Heimdahl</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#Michael_Peterson -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#Michael_Peterson">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Writer"/>
+        <ontology:author rdf:resource="https://doi.org/10.1016/j.ress.2021.107649"/>
+        <ontology:email xml:lang="en">Michael.Peterson@collins.com</ontology:email>
+        <ontology:name xml:lang="en">Michael Peterson</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#Michael_W._Whalen -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#Michael_W._Whalen">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Writer"/>
+        <ontology:author rdf:resource="https://doi.org/10.1016/j.ress.2021.107649"/>
+        <ontology:email xml:lang="en">whalen@cs.umn.edu</ontology:email>
+        <ontology:name xml:lang="en">Michael W. Whalen</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#Model_checking -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#Model_checking">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Concept"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#PV0 -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#PV0">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#PV"/>
+        <ontology:abstract xml:lang="en">PV0 tools manipulate given and produced software artefacts with some degree of rigour. Conceptually such artefacts then may correspond to mathematical and formal entities, but this correspondence is mostly a matter of expectations. This category should be reasonably unpopulated since we mostly avoid to include such tools listed on this website.</ontology:abstract>
+        <ontology:name xml:lang="en">PV0</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#PV1 -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#PV1">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#PV"/>
+        <ontology:abstract xml:lang="en">PV1 tools encode the formal expectations about the artefacts that they manipulate, and report back to their users about found inconsistencies. A typical resident of this level could be a linter: a tool that analyses your program and complains about places where your program does not conform to its expectations.</ontology:abstract>
+        <ontology:name xml:lang="en">PV1</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#PV2 -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#PV2">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#PV"/>
+        <ontology:abstract xml:lang="en">PV2 tools generate an executable artefact from a formal one that specifies the desired properties and conditions, without necessarily providing means of explicitly verifying the correctness of the synthesised code. For instance, it could be a test data generator that produces a lot of diverse test cases from a model.</ontology:abstract>
+        <ontology:name xml:lang="en">PV2</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#PV3 -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#PV3">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#PV"/>
+        <ontology:abstract xml:lang="en">PV3 tools allow the end user to control the properties that are being checked. For instance, it could be a tool that analyses user-written assertions in the code and verifies that they are indeed always respected by the program.</ontology:abstract>
+        <ontology:name xml:lang="en">PV3</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#PV4 -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#PV4">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#PV"/>
+        <ontology:abstract xml:lang="en">PV4 tools operate within a particular paradigm and derive their actions, conclusions and even properties that they need to check, from a built-in formal specification. For example, such a tool can guarantee freedom of deadlocks in a multi-threaded application, or data consistency in a database management system. Generated property set cannot be explicitly adjusted for tools of this level.</ontology:abstract>
+        <ontology:name xml:lang="en">PV4</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#PV5 -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#PV5">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#PV"/>
+        <ontology:abstract xml:lang="en">PV5 tools allow the end user to write their own specifications and “compile” them together with desired properties to fully formal mathematical representations that can be combined with mathematical representations of programs themselves or their desired properties, and verified together. Such a tool can already help someone make claims and guarantees about correctness, complexity or predicted performance of a novel, previously non-existing, garbage collection algorithm.</ontology:abstract>
+        <ontology:name xml:lang="en">PV5</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#PV6 -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#PV6">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#PV"/>
+        <ontology:abstract xml:lang="en">PV6 tools can handle different user-written specifications, encode a wide range of different formulae for properties, and are capable of producing proofs of such properties together with inferring the correctness of such proofs.</ontology:abstract>
+        <ontology:name xml:lang="en">PV6</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#Jing_(Janet)_Liu -->
+
+    <owl:NamedIndividual rdf:about="http://slebok.github.io/proverb/ontology#Jing_(Janet)_Liu">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Writer"/>
+        <ontology:author rdf:resource="https://doi.org/10.1016/j.ress.2021.107649"/>
+        <ontology:email xml:lang="en">Jing.Liu@collins.com</ontology:email>
+        <ontology:name xml:lang="en">Jing (Janet) Liu</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1007/978-3-642-28891-3_13 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1007/978-3-642-28891-3_13">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Article"/>
+        <ontology:abstract xml:lang="en">This paper describes a design flow and supporting tools to significantly improve the design and verification of complex cyber-physical systems. We focus on system architecture models composed from libraries of components and complexity-reducing design patterns having formally verified properties. This allows new system designs to be developed rapidly using patterns that have been shown to reduce unnecessary complexity and coupling between components. Components and patterns are annotated with formal contracts describing their guaranteed behaviors and the contextual assumptions that must be satisfied for their correct operation. We describe the compositional reasoning framework that we have developed for proving the correctness of a system design, and provide a proof of the soundness of our compositional reasoning approach. An example based on an aircraft flight control system is provided to illustrate the method and supporting analysis tools.</ontology:abstract>
+        <ontology:name xml:lang="en">Compositional Verification of Architectural Models</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://doi.org/10.1016/j.ress.2021.107649 -->
+
+    <owl:NamedIndividual rdf:about="https://doi.org/10.1016/j.ress.2021.107649">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Article"/>
+        <ontology:abstract xml:lang="en">Model-based engineering tools are increasingly being used for system-level development of safety-critical systems. Architectural and behavioral models provide important information that can be leveraged to improve the system safety analysis process. Model-based design artifacts produced in early stage development activities can be used to perform system safety analysis, reducing costs, and providing accurate results throughout the system life-cycle. In this paper we describe an extension to the Architecture Analysis and Design Language (AADL) that supports modeling of system behavior under failure conditions. This safety annex enables the independent modeling of component failures and allows safety engineers to weave various types of fault behavior into the nominal system model. The accompanying tool support uses model checking to verify safety properties in the presence of faults and comprehensively enumerate all applicable fault combinations leading to failure conditions under quantitative objectives as part of the safety assessment process. The approach allows exploration of the effects of faulty component behavior on system level failure conditions without requiring explicit propagation specifications. It also supports a shared system model, a modeling language that can describe real-time embedded systems, and usable safety analysis artifacts.</ontology:abstract>
+        <ontology:name xml:lang="en">AADL-Based safety analysis using formal methods applied to aircraft digital systems</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/dkstewart -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/dkstewart">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#CodeContributor"/>
+        <ontology:contributor rdf:resource="https://github.com/loonwerks/AGREE"/>
+        <ontology:abstract xml:lang="en">PhD candidate at University of Minnesota. Interested in Model Based Safety Analysis of critical systems and formal verification.</ontology:abstract>
+        <ontology:name xml:lang="en">Danielle Stewart</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/loonwerks/AGREE -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/loonwerks/AGREE">
+        <rdf:type rdf:resource="http://slebok.github.io/proverb/ontology#Repository"/>
+        <ontology:abstract xml:lang="en">Assume-Guarantee REasoning Environment</ontology:abstract>
+        <ontology:name xml:lang="en">AGREE</ontology:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV0"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV1"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV2"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV3"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV4"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV5"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV6"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 

@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontology="http://slebok.github.io/proverb/ontology#">
     <owl:Ontology rdf:about="http://slebok.github.io/proverb/ontology">
-        <owl:versionIRI rdf:resource="http://slebok.github.io/proverb/ontology/1.0.0"/>
+        <owl:versionIRI rdf:resource="http://slebok.github.io/proverb/ontology/1.3.0"/>
     </owl:Ontology>
     
 
@@ -201,6 +201,29 @@
     <owl:Class rdf:about="http://slebok.github.io/proverb/ontology#Writer">
         <rdfs:subClassOf rdf:resource="http://slebok.github.io/proverb/ontology#Person"/>
     </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV0"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV1"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV2"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV3"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV4"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV5"/>
+            <rdf:Description rdf:about="http://slebok.github.io/proverb/ontology#PV6"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 

@@ -201,12 +201,6 @@
     
 
 
-    <!-- http://slebok.github.io/proverb/ontology#Technique -->
-
-    <owl:Class rdf:about="http://slebok.github.io/proverb/ontology#Technique"/>
-    
-
-
     <!-- http://slebok.github.io/proverb/ontology#Tool -->
 
     <owl:Class rdf:about="http://slebok.github.io/proverb/ontology#Tool"/>

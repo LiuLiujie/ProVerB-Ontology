@@ -10,7 +10,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ontology="http://slebok.github.io/proverb/ontology#">
     <owl:Ontology rdf:about="http://slebok.github.io/proverb/ontology">
-        <owl:versionIRI rdf:resource="http://slebok.github.io/proverb/ontology/1.5.0"/>
+        <owl:versionIRI rdf:resource="http://slebok.github.io/proverb/ontology/1.6.0"/>
     </owl:Ontology>
     
 
@@ -142,6 +142,12 @@
     <owl:DatatypeProperty rdf:about="http://slebok.github.io/proverb/ontology#name">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://slebok.github.io/proverb/ontology#username -->
+
+    <owl:DatatypeProperty rdf:about="http://slebok.github.io/proverb/ontology#username"/>
     
 
 
